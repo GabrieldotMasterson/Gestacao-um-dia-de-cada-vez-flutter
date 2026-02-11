@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/widget_background">
+
+    <!-- Emoji -->
+    <TextView
+        android:id="@+id/widget_emoji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌸"
+        android:textSize="32sp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensagem do Dia"
+        android:textSize="12sp"
+        android:textColor="#E8849C"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/widget_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abra o aplicativo para ver sua mensagem do dia!"
+        android:textSize="13sp"
+        android:textColor="#3D2B35"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.4"
+        android:maxLines="4"
+        android:ellipsize="end" />
+
+    <!-- Subtle app name -->
+    <TextView
+        android:id="@+id/widget_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Body"
+        android:textSize="9sp"
+        android:textColor="#A88896"
+        android:gravity="center"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>

@@ -186,6 +186,78 @@ class _DailyMessagePageState extends State<DailyMessagePage>
     ),
   );
 
+  // Função para mostrar o pop-up
+void _showHowToDialog(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: const Text('Como adicionar o widget'),
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              _buildStep(1, 'Pressione e segure em uma área vazia da tela inicial'),
+              _buildStep(2, 'Toque em "Widgets" no menu que aparecer'),
+              _buildStep(3, 'Encontre nosso app na lista'),
+              _buildStep(4, 'Selecione o widget "Mensagem do Dia"'),
+              _buildStep(5, 'Arraste para a posição desejada'),
+              const SizedBox(height: 16),
+              const Text(
+                'Pronto! Agora você verá uma nova mensagem inspiradora todos os dias.',
+                style: TextStyle(fontStyle: FontStyle.italic),
+              ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Entendi'),
+          ),
+        ],
+      );
+    },
+  );
+}
+
+Widget _buildStep(int number, String text) {
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 8.0),
+    child: Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: 24,
+          height: 24,
+          decoration: BoxDecoration(
+            color: kPrimary,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Center(
+            child: Text(
+              '$number',
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(width: 12),
+        Expanded(
+          child: Text(
+            text,
+            style: const TextStyle(fontSize: 14),
+          ),
+        ),
+      ],
+    ),
+  );
+}
+
   Widget _buildMessageContent() {
     final msg = _message!;
     return SlideTransition(
@@ -332,18 +404,24 @@ class _DailyMessagePageState extends State<DailyMessagePage>
               ),
             ),
             const SizedBox(width: 8),
+            
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
                 color: kPrimary,
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: const Text(
-                'Como?',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600,
+              child: InkWell(
+                onTap: () {
+                  _showHowToDialog(context);
+                },
+                child: const Text(
+                  'Como?',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
             ),

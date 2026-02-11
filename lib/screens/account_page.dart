@@ -394,7 +394,12 @@ class _AccountPageState extends State<AccountPage> {
       children: [
         const Icon(Icons.check_circle_outline, color: kPremiumGold, size: 18),
         const SizedBox(width: 8),
-        Text(text, style: const TextStyle(fontSize: 13, color: Colors.white70)),
+        Expanded(
+          child: Text(
+            text,
+            style: const TextStyle(fontSize: 13, color: Colors.white70),
+          ),
+        ),
       ],
     );
   }
