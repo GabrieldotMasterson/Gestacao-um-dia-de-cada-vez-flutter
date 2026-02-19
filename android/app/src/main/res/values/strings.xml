@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">gestacao</string>
     <string name="widget_description">Mensagem motivacional diária para sua gestação</string>
+    <string name="widget_padrao_description">Widget gratuito rosa suave</string>
+    <string name="widget_floral_description">Tema floral premium</string>
+    <string name="widget_oceano_description">Tema oceano premium</string>
+    <string name="widget_transformacao_description">Tema transformação premium</string>
+    <string name="widget_noite_description">Tema noite premium</string>
+    <string name="widget_natureza_description">Tema natureza premium</string>
+    <string name="widget_seucorpo_description">Tema seu corpo premium</string>
+    <string name="widget_sol_description">Tema sol premium</string>
+    <string name="widget_serenidade_description">Tema serenidade premium</string>
+    <string name="widget_forca_description">Tema força premium</string>
+    <string name="widget_ternura_description">Tema ternura premium</string>
 </resources>

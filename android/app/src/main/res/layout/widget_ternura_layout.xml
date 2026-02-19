@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/widget_ternura_background">
+
+    <!-- Emoji -->
+    <TextView
+        android:id="@+id/widget_emoji"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💕"
+        android:textSize="36sp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/widget_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mensagem do Dia"
+        android:textSize="11sp"
+        android:textColor="#C89EC4"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        android:letterSpacing="0.05" />
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/widget_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Abra o app para ver sua mensagem!"
+        android:textSize="14sp"
+        android:textColor="#3E2F3C"
+        android:gravity="center"
+        android:lineSpacingMultiplier="1.5"
+        android:maxLines="4"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- Premium Badge -->
+    <TextView
+        android:id="@+id/widget_premium_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✨ PREMIUM"
+        android:textSize="8sp"
+        android:textColor="#C89EC4"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:background="@drawable/badge_background"
+        android:textStyle="bold"
+        android:letterSpacing="0.1" />
+
+</LinearLayout>

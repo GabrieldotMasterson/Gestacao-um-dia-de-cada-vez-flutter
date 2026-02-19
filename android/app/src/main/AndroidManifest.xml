@@ -3,7 +3,7 @@
     <application
         android:label="umdiadecadavez"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -44,6 +44,148 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_info" />
+        </receiver>
+        <!-- Widget Padrão -->
+        <receiver
+            android:name=".DailyMessageWidgetPadraoProvider"
+            android:exported="true"
+            android:label="Mensagem Padrão">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_padrao_info" />
+        </receiver>
+
+        <!-- Widget Floral -->
+        <receiver
+            android:name=".DailyMessageWidgetFloralProvider"
+            android:exported="true"
+            android:label="Mensagem Floral">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_floral_info" />
+        </receiver>
+
+        <!-- Widget Oceano -->
+        <receiver
+            android:name=".DailyMessageWidgetOceanoProvider"
+            android:exported="true"
+            android:label="Mensagem Oceano">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_oceano_info" />
+        </receiver>
+
+        <!-- Widget Transformação -->
+        <receiver
+            android:name=".DailyMessageWidgetTransformacaoProvider"
+            android:exported="true"
+            android:label="Mensagem Transformação">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android:appwidget.provider"
+                android:resource="@xml/widget_transformacao_info" />
+        </receiver>
+
+        <!-- Widget Noite -->
+        <receiver
+            android:name=".DailyMessageWidgetNoiteProvider"
+            android:exported="true"
+            android:label="Mensagem Noite">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_noite_info" />
+        </receiver>
+
+        <!-- Widget Natureza -->
+        <receiver
+            android:name=".DailyMessageWidgetNaturezaProvider"
+            android:exported="true"
+            android:label="Mensagem Natureza">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_natureza_info" />
+        </receiver>
+
+        <!-- Widget Seu Corpo -->
+        <receiver
+            android:name=".DailyMessageWidgetSeuCorpoProvider"
+            android:exported="true"
+            android:label="Mensagem Seu Corpo">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_seucorpo_info" />
+        </receiver>
+
+        <!-- Widget Sol -->
+        <receiver
+            android:name=".DailyMessageWidgetSolProvider"
+            android:exported="true"
+            android:label="Mensagem Sol">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_sol_info" />
+        </receiver>
+
+        <!-- Widget Serenidade -->
+        <receiver
+            android:name=".DailyMessageWidgetSerenidadeProvider"
+            android:exported="true"
+            android:label="Mensagem Serenidade">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_serenidade_info" />
+        </receiver>
+
+        <!-- Widget Força -->
+        <receiver
+            android:name=".DailyMessageWidgetForcaProvider"
+            android:exported="true"
+            android:label="Mensagem Força">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_forca_info" />
+        </receiver>
+
+        <!-- Widget Ternura -->
+        <receiver
+            android:name=".DailyMessageWidgetTernuraProvider"
+            android:exported="true"
+            android:label="Mensagem Ternura">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_ternura_info" />
         </receiver>
     </application>
     <!-- Required to query activities that can process text, see:
