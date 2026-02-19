@@ -4,6 +4,7 @@ import 'package:gestacao/screens/daily_message_page.dart';
 import 'package:gestacao/screens/reminders_page.dart';
 import 'package:gestacao/screens/account_page.dart';
 import 'package:gestacao/screens/premium_page.dart';
+import 'package:gestacao/screens/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       title: 'Gestacao',
       theme: theme,
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home: const OnboardingScreen(),
     );
   }
 }
